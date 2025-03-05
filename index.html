@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampylos Architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #496b70;
+            --secondary: #624a71;
+            --accent: #714f4a;
+            --highlight: #587049;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="logos/logo-transparent-svg.svg" alt="Kampylos Architecture Logo" class="h-10"> 
+                    <span class="text-2xl font-bold text-[var(--primary)] ml-2">Kampylos Architecture</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#projekte" class="text-[var(--secondary)] hover:text-[var(--primary)]">Projekte</a>
+                    <a href="#ueber-uns" class="text-[var(--secondary)] hover:text-[var(--primary)]">Über Uns</a>
+                    <a href="#kontakt" class="text-[var(--secondary)] hover:text-[var(--primary)]">Kontakt</a>
+                    <a href="https://kampylos.blob.core.windows.net/kamyploscontainer/Modul04_Bewertungsmatrix.pdf" class="text-[var(--secondary)] hover:text-[var(--primary)]">Bewertungsmatrix</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-cover bg-center h-screen flex items-center justify-center text-white text-center relative">
+        <picture>
+            <source srcset="pictures/hero-large.jpg" media="(min-width: 1024px)">
+            <source srcset="pictures/hero-small.jpg" media="(max-width: 1023px)">
+            <img src="pictures/hero-large.jpg" alt="Hero Image" class="absolute inset-0 w-full h-full object-cover">
+        </picture>
+        <div class="bg-[var(--primary)] bg-opacity-80 p-8 rounded-xl relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold">Zeitlose Architektur mit Vision</h1>
+            <p class="mt-4 text-lg">Nachhaltig. Innovativ. Zukunftsweisend.</p>
+        </div>
+    </header>
+
+    <!-- Projekte -->
+    <!-- Für die interne Projektplanung wird auf OpenProject gesetzt-->
+    <!-- Link: https://www.openproject.org/de/docs/installation-and-operations/installation/docker/ -->
+    <section id="projekte" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-[var(--primary)]">Unsere Projekte</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-8">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <picture>
+                        <source srcset="pictures/Living_sustainable.jpg" media="(min-width: 1024px)">
+                        <source srcset="project1-small.jpg" media="(max-width: 1023px)">
+                        <img src="pictures/Living_sustainable.jpg" alt="Projekt A" class="rounded-lg">
+                    </picture>
+                    <h3 class="text-xl font-semibold mt-4 text-[var(--accent)]">Projekt A</h3>
+                    <p class="text-gray-600">Innovative Wohnkonzepte mit nachhaltiger Bauweise.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <picture>
+                        <source srcset="pictures/Urban_Highrise.jpg" media="(min-width: 1024px)">
+                        <source srcset="project2-small.jpg" media="(max-width: 1023px)">
+                        <img src="pictures/Urban_Highrise.jpg" alt="Projekt B" class="rounded-lg">
+                    </picture>
+                    <h3 class="text-xl font-semibold mt-4 text-[var(--accent)]">Projekt B</h3>
+                    <p class="text-gray-600">Urbanes Hochhausdesign mit grünen Flächen.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <picture>
+                        <source srcset="pictures/Bureau_concept.jpg" media="(min-width: 1024px)">
+                        <source srcset="project3-small.jpg" media="(max-width: 1023px)">
+                        <img src="pictures/Bureau_concept.jpg" alt="Projekt C" class="rounded-lg">
+                    </picture>
+                    <h3 class="text-xl font-semibold mt-4 text-[var(--accent)]">Projekt C</h3>
+                    <p class="text-gray-600">Bürogebäude mit innovativer Raumgestaltung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über Uns -->
+    <section id="ueber-uns" class="py-16 bg-[var(--highlight)] text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold">Über Uns</h2>
+            <img src="pictures/Team.jpg" alt="Team Illustration" class="mx-auto w-32 h-32 mt-4">
+            <p class="mt-4 text-lg">
+                Kampylos Architecture steht für zukunftsweisende Architektur,  
+                die Ästhetik, Funktionalität und Nachhaltigkeit vereint.
+            </p>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-[var(--primary)]">Kontakt</h2>
+            <div class="mt-8 flex justify-center">
+                <form class="bg-gray-200 p-6 rounded-lg shadow-md w-full max-w-lg">
+                    <label class="block mb-2 font-semibold">Name</label>
+                    <input type="text" class="w-full p-2 rounded-lg border border-gray-300" placeholder="Ihr Name">
+                    
+                    <label class="block mt-4 mb-2 font-semibold">E-Mail</label>
+                    <input type="email" class="w-full p-2 rounded-lg border border-gray-300" placeholder="Ihre E-Mail">
+
+                    <label class="block mt-4 mb-2 font-semibold">Nachricht</label>
+                    <textarea class="w-full p-2 rounded-lg border border-gray-300" rows="4" placeholder="Ihre Nachricht"></textarea>
+
+                    <button type="submit" class="mt-4 w-full bg-[var(--accent)] text-white py-2 rounded-lg hover:bg-[var(--secondary)]">
+                        Senden
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--primary)] text-white text-center py-4">
+        <p>&copy; 1992-2025 Kampylos Architecture – Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <!-- Diese Webseite wurde vollständig mit Hilfe von KI erstellt. -->
+
+</body>
+</html>
